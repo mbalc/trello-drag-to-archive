@@ -1,5 +1,11 @@
 {
     "manifest_version": 2,
     "name": "Trello Drag to Archive",
-    "version": "0.1"
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": ["*://trello.com/*"],
+            "js": ["main.js"]
+        }
+    ]
 }
