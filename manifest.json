@@ -5,13 +5,8 @@
     "background": {
         "scripts": ["background.js"]
     },
-    "content_scripts": [
-        {
-            "matches": ["*://trello.com/*"],
-            "js": ["main.js"]
-        }
-    ],
     "permissions": [
+        "*://trello.com/*",
         "tabs"
     ]
 }

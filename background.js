@@ -4,10 +4,10 @@ function handleTabUpdated(tabId, changeInfo, tabInfo) {
 
   if (newTabUrl) {
     if (trelloBoardUrlPattern.test(newTabUrl)) {
-      console.log(`detected board url ${newTabUrl}`);
+      browser.tabs.executeScript(tabId, { file: 'attach.js' });
     }
     else {
-      console.log(`detected non-board url ${newTabUrl}`);
+      browser.tabs.executeScript(tabId, { file: 'detach.js' });
     }
   }
 }
