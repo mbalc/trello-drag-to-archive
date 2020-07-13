@@ -2,10 +2,16 @@
     "manifest_version": 2,
     "name": "Trello Drag to Archive",
     "version": "0.1",
+    "background": {
+        "scripts": ["background.js"]
+    },
     "content_scripts": [
         {
             "matches": ["*://trello.com/*"],
             "js": ["main.js"]
         }
+    ],
+    "permissions": [
+        "tabs"
     ]
 }
